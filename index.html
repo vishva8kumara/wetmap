@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="arc.js"></script>
+  <title>Rain Map</title>
+</head>
+
+<body>
+  <div class="app">
+    <div class="map"></div>
+    <div id="mapOverlay"></div>
+
+    <div class="info-panel">
+      <div class="date" id="date">-- --- ----</div>
+      <div class="time" id="time">--:--</div>
+	  <a class="toggle-legend">Legend</a>
+      <div class="legend">
+        <div><span class="lg-circle"></span> Rain risk (size)</div>
+        <div><span class="lg-opacity"></span> Probability (opacity)</div>
+        <div><span class="lg-color"></span> Temperature (color)</div>
+        <div><span class="lg-bright"></span> Cloudiness (darkness)</div>
+        <div><span class="lg-wind"></span> Wind direction/speed</div>
+      </div>
+    </div>
+
+    <div id="controlBar" class="control-bar" style="display:none;">
+      <div class="slider-container">
+        <button id="playPause">►</button>
+        <div class="slider-labels">
+          <span>Now</span>
+          <span>Future</span>
+        </div>
+        <div class="timeSliderTicks"></div>
+        <input type="range" min="0" max="40" step="1" value="0" id="timeSlider" />
+      </div>
+    </div>
+  </div>
+  <script src="script.js" /></script>
+</body>
+</html>
